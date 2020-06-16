@@ -9,9 +9,8 @@
     $Description = "a network one-page document that shows the current configuration found."
     #####################################################################
     $ConnectedNetworks = Get-NetIPConfiguration -Detailed | Where-Object {$_.Netadapter.status -eq "up"}
-    Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    If(Get-Module -ListAvailable -Name "ITGlueAPI") {Import-module ITGlueAPI} Else { install-module ITGlueAPI -Force; import-module ITGlueAPI}
-    If(Get-Module -ListAvailable -Name "PSnmap") {Import-module "PSnmap"} Else { install-module "PSnmap" -Force; import-module "PSnmap"}
+    If(Get-Module -ListAvailable -Name "ITGlueAPI") {Import-module ITGlueAPI} Else { import-module C:\temp\itglue\modules\itgluepowershell\ITGlueAPI.psm1}
+    If(Get-Module -ListAvailable -Name "PSnmap") {Import-module "PSnmap"} Else { import-module C:\temp\itglue\modules\PSNMap\ITGlueAPI.psm1}
         #Settings IT-Glue logon information
         Add-ITGlueBaseURI -base_uri $APIEndpoint
         Add-ITGlueAPIKey $APIKEy
