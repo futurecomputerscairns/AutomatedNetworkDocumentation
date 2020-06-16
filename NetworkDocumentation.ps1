@@ -5,7 +5,7 @@
     $APIEndpoint = "https://api.itglue.com"
     #Tag related devices. this will try to find the devices based on the MAC, Connected to this network, and tag them as related devices.
     $TagRelatedDevices = $true
-    $FlexAssetName = "ITGlue AutoDoc - Network overview v2"
+    $FlexAssetName = "Network Overview [AUTO]"
     $Description = "a network one-page document that shows the current configuration found."
     #####################################################################
     $ConnectedNetworks = Get-NetIPConfiguration -Detailed | Where-Object {$_.Netadapter.status -eq "up"}
