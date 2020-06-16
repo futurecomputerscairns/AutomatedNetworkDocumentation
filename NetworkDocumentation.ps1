@@ -3,7 +3,6 @@
 #####################################################################
     
     $APIEndpoint = "https://api.itglue.com"
-    $orgID = "2440615"
     #Tag related devices. this will try to find the devices based on the MAC, Connected to this network, and tag them as related devices.
     $TagRelatedDevices = $true
     $FlexAssetName = "ITGlue AutoDoc - Network overview v2"
